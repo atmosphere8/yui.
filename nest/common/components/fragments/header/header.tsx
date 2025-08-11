@@ -1,7 +1,5 @@
 //imports
 import { View, Text } from "react-native";
-
-//hooks
 import { useFonts } from "expo-font";
 
 //styles

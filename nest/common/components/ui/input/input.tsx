@@ -1,5 +1,5 @@
 //imports
-import { StyleProp, TextInput, TextStyle } from "react-native";
+import { TextInput } from "react-native";
 
 //styles
 import styles from "./input-styles";

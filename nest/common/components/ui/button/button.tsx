@@ -1,6 +1,5 @@
 //imports
-import { CaretCircleDoubleRightIcon } from "phosphor-react-native";
-import { Pressable, Text } from "react-native";
+import { Pressable } from "react-native";
 
 //styles
 import styles from "./button-styles";
@@ -8,10 +7,10 @@ import styles from "./button-styles";
 //types
 import { props } from "./button-types";
 
-export default ({ action }: props) => {
+export default ({ action, icon: Icon, style }: props) => {
   return (
-    <Pressable style={styles.button} onPress={action}>
-      <CaretCircleDoubleRightIcon size={32} />
+    <Pressable style={[styles.button, style]} onPress={action}>
+      {Icon}
     </Pressable>
   );
 };
