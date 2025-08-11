@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: indents.indent64,
-    fontStyle: "italic",
   },
 });
 

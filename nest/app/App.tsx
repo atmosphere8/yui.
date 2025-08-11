@@ -1,13 +1,13 @@
-// //imports
+//imports
 import { View, TextInput, Pressable, Text, FlatList } from "react-native";
 import { Header } from "../common/components/fragments";
 import { Input, Button } from "../common/components/ui";
 import { Note } from "../common/components/entities";
 
-// hooks
+//hooks
 import { useState } from "react";
 
-// styles
+//styles
 import styles from "./app-styles";
 
 //globals
