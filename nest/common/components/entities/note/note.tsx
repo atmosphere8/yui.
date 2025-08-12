@@ -1,7 +1,7 @@
 //imports
 import { PencilSimpleIcon, TrashSimpleIcon } from "phosphor-react-native";
 import { View, Text } from "react-native";
-import { Button } from "../../ui/index";
+import { Button } from "@components/ui/index";
 
 //styles
 import styles from "./note-styles";
@@ -10,7 +10,7 @@ import styles from "./note-styles";
 import { props } from "./note-types";
 
 //globals
-import colors from "../../../assets/globals/colors";
+import colors from "@globals/colors";
 
 export default ({ text, remove }: props) => {
   return (

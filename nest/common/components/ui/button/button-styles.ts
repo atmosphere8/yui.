@@ -2,8 +2,8 @@
 import { StyleSheet } from "react-native";
 
 //globals
-import colors from "../../../assets/globals/colors";
-import indents from "../../../assets/globals/indents";
+import colors from "@globals/colors";
+import indents from "@globals/indents";
 
 const styles = StyleSheet.create({
   button: {

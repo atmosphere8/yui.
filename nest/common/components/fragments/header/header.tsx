@@ -7,7 +7,7 @@ import styles from "./header-styles";
 
 export default () => {
   const [fonst_loaded] = useFonts({
-    "inter-italic": require("./../../../assets/fonts/inter-italic.otf"),
+    "inter-italic": require("@fonts/inter-italic.otf"),
   });
 
   if (!fonst_loaded) return null;

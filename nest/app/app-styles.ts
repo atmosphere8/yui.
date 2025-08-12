@@ -2,7 +2,7 @@
 import { StyleSheet } from "react-native";
 
 //globals
-import indents from "../common/assets/globals/indents";
+import indents from "@globals/indents";
 
 const styles = StyleSheet.create({
   main: {

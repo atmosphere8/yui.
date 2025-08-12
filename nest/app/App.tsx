@@ -1,19 +1,19 @@
 //imports
-import { View, TextInput, Pressable, Text, FlatList } from "react-native";
-import { Header } from "../common/components/fragments";
-import { Input, Button } from "../common/components/ui";
-import { Note } from "../common/components/entities";
+import { CaretCircleDoubleRightIcon } from "phosphor-react-native";
+import { View, FlatList } from "react-native";
+import { Header } from "@components/fragments/index";
+import { Input, Button } from "@components/ui/index";
+import { Note } from "@components/entities/index";
 import { useState } from "react";
 
 //styles
 import styles from "./app-styles";
 
 //globals
-import indents from "../common/assets/globals/indents";
-import { CaretCircleDoubleRightIcon } from "phosphor-react-native";
+import indents from "@globals/indents";
 
 //types
-import { note } from "../common/components/entities/note/note-types";
+import { note } from "@components/entities/note/note-types";
 
 export default function App() {
   const [notes, set_notes] = useState<note[]>([]);
