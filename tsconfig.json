@@ -4,10 +4,11 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["nest/app/*"],
-      "@components/*": ["nest/common/components/*"],
-      "@globals/*": ["nest/common/assets/globals/*"],
-      "@fonts/*": ["nest/common/assets/fonts/*"]
+      "@app/*": ["app/*"],
+      "@components/*": ["common/components/*"],
+      "@globals/*": ["common/assets/globals/*"],
+      "@fonts/*": ["common/assets/fonts/*"],
+      "@appstyles/*": ["common/assets/app-styles/*"]
     }
   }
 }

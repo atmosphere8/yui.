@@ -7,7 +7,7 @@ import { Note } from "@components/entities/index";
 import { useState } from "react";
 
 //styles
-import styles from "./app-styles";
+import styles from "@appstyles/index-styles";
 
 //globals
 import indents from "@globals/indents";
@@ -15,11 +15,11 @@ import indents from "@globals/indents";
 //types
 import { note } from "@components/entities/note/note-types";
 
-export default function App() {
+const Index = () => {
   const [notes, set_notes] = useState<note[]>([]);
   const [current_note, set_current_note] = useState("");
 
-  const add_to_notes = () => {
+  const add = () => {
     if (current_note.trim() === "") return;
 
     set_notes((prev) => [
@@ -27,6 +27,10 @@ export default function App() {
       { id: Date.now().toString(), text: current_note },
     ]);
     set_current_note("");
+  };
+
+  const remove = (item: note) => {
+    set_notes((prev) => prev.filter((note) => note.id !== item.id));
   };
 
   return (
@@ -40,19 +44,14 @@ export default function App() {
             on_change={set_current_note}
           />
           <Button
-            action={add_to_notes}
+            action={add}
             icon={<CaretCircleDoubleRightIcon size={28} />}
           />
         </View>
         <FlatList
           data={notes}
           renderItem={({ item }) => (
-            <Note
-              text={item.text}
-              remove={() => {
-                set_notes((prev) => prev.filter((note) => note.id !== item.id));
-              }}
-            />
+            <Note text={item.text} remove={() => remove(item)} />
           )}
           keyExtractor={(item) => item.id.toString()}
           ItemSeparatorComponent={() => (
@@ -62,4 +61,6 @@ export default function App() {
       </View>
     </View>
   );
-}
+};
+
+export default Index;
