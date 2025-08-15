@@ -1,20 +1,16 @@
 //imports
 import { View, Text } from "react-native";
-import { useFonts } from "expo-font";
 
 //styles
 import styles from "./header-styles";
 
+//icons
+import LogoText from "@icons/logo_text.svg";
+
 export default () => {
-  const [fonst_loaded] = useFonts({
-    "inter-italic": require("@fonts/inter-italic.otf"),
-  });
-
-  if (!fonst_loaded) return null;
-
   return (
     <View style={styles.header}>
-      <Text style={[styles.title, { fontFamily: "inter-italic" }]}>yui.</Text>
+      <LogoText height={75} width={150} />
     </View>
   );
 };

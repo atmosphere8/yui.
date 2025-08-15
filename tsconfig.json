@@ -8,7 +8,8 @@
       "@components/*": ["common/components/*"],
       "@globals/*": ["common/assets/globals/*"],
       "@fonts/*": ["common/assets/fonts/*"],
-      "@appstyles/*": ["common/assets/app-styles/*"]
+      "@appstyles/*": ["common/assets/app-styles/*"],
+      "@icons/*": ["common/assets/icons/*"]
     }
   }
 }
