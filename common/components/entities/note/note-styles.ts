@@ -39,6 +39,13 @@ const styles = StyleSheet.create({
   remove_button: {
     backgroundColor: colors.color_red,
   },
+  apply_button: {
+    backgroundColor: colors.color_blue,
+  },
+  text_input: {
+    padding: 0,
+    margin: 0,
+  },
 });
 
 export default styles;

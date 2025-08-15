@@ -5,6 +5,7 @@ const colors = {
   color4: "#404040",
   color5: "#000000",
   color_red: "#FD5154",
+  color_blue: "#51C1FD",
 };
 
 export default colors;

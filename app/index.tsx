@@ -33,8 +33,14 @@ const Index = () => {
     set_notes((prev) => prev.filter((note) => note.id !== item.id));
   };
 
+  const update = (id: string, new_text: string) => {
+    set_notes((prev) =>
+      prev.map((note) => (note.id === id ? { ...note, text: new_text } : note))
+    );
+  };
+
   return (
-    <View style={styles.main}>
+    <View>
       <Header />
       <View style={styles.notes}>
         <View style={styles.actions}>
@@ -51,7 +57,11 @@ const Index = () => {
         <FlatList
           data={notes}
           renderItem={({ item }) => (
-            <Note text={item.text} remove={() => remove(item)} />
+            <Note
+              text={item.text}
+              remove={() => remove(item)}
+              update={(new_text) => update(item.id, new_text)}
+            />
           )}
           keyExtractor={(item) => item.id.toString()}
           ItemSeparatorComponent={() => (
