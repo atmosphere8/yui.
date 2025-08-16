@@ -1,5 +1,7 @@
 import { ExpoConfig } from "expo/config";
 
+const icons = "./common/assets/icons";
+
 const config: ExpoConfig = {
   name: "yui",
   slug: "yui",
@@ -7,26 +9,20 @@ const config: ExpoConfig = {
   version: "1.0.0",
   orientation: "portrait",
   newArchEnabled: true,
+  icon: `${icons}/logo.png`,
+  splash: {
+    image: `${icons}/logo_text.png`,
+    resizeMode: "contain",
+    backgroundColor: "#fff",
+  },
   ios: {
     supportsTablet: true,
-    icon: "./common/assets/icons/logo.png",
-    splash: {
-      image: "./common/assets/icons/logo.png",
-      resizeMode: "contain",
-      backgroundColor: "#fff",
-    },
   },
   android: {
     edgeToEdgeEnabled: true,
-    icon: "./common/assets/icons/logo.png",
-    splash: {
-      image: "./common/assets/icons/logo.png",
-      resizeMode: "contain",
-      backgroundColor: "#fff",
-    },
   },
   web: {
-    favicon: "./common/assets/icons/logo.png",
+    favicon: `${icons}/logo.png`,
   },
   plugins: ["expo-router"],
 };
