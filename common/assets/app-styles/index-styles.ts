@@ -5,6 +5,9 @@ import { StyleSheet } from "react-native";
 import indents from "@globals/indents";
 
 const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+  },
   notes: {
     display: "flex",
     gap: indents.indent48,

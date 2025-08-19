@@ -5,9 +5,9 @@ import { Pressable } from "react-native";
 import styles from "./button-styles";
 
 //types
-import { props } from "./button-types";
+import { Props } from "./button-types";
 
-export default ({ action, icon: Icon, style }: props) => {
+export default ({ action, icon: Icon, style }: Props) => {
   return (
     <Pressable style={[styles.button, style]} onPress={action}>
       {Icon}

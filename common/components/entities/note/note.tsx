@@ -12,12 +12,12 @@ import { Button } from "@components/ui/index";
 import styles from "./note-styles";
 
 //types
-import { props } from "./note-types";
+import { Props } from "./note-types";
 
 //globals
 import colors from "@globals/colors";
 
-export default ({ text, remove, update }: props) => {
+export default ({ text, remove, update }: Props) => {
   const [is_editing, set_is_editing] = useState(false);
   const [new_text, set_new_text] = useState(text);
 

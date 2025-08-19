@@ -5,7 +5,9 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["app/*"],
+      "@contexts/*": ["contexts/*"],
       "@components/*": ["common/components/*"],
+      "@storage/*": ["common/storage/*"],
       "@globals/*": ["common/assets/globals/*"],
       "@fonts/*": ["common/assets/fonts/*"],
       "@appstyles/*": ["common/assets/app-styles/*"],

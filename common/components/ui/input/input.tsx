@@ -5,9 +5,9 @@ import { TextInput } from "react-native";
 import styles from "./input-styles";
 
 //types
-import { props } from "./input-types";
+import { Props } from "./input-types";
 
-export default ({ style, value, on_change }: props) => {
+export default ({ style, value, on_change }: Props) => {
   return (
     <TextInput
       placeholder="write here..."
