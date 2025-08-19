@@ -1,5 +1,6 @@
 //imports
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
+import { TextInput } from "react-native";
 import {
   create_note,
   list_notes,
@@ -22,6 +23,7 @@ export const useIndex = () => {
 export const IndexProvider = ({ children }: { children: React.ReactNode }) => {
   const [notes, set_notes] = useState<NoteType[]>(list_notes());
   const [current_note, set_current_note] = useState("");
+  const create_input_ref = useRef<TextInput | null>(null);
 
   const create = () => {
     if (current_note.trim() === "") return;
@@ -30,6 +32,8 @@ export const IndexProvider = ({ children }: { children: React.ReactNode }) => {
 
     set_notes(list_notes());
     set_current_note("");
+
+    create_input_ref.current?.blur();
   };
 
   const remove = (id: string) => {
@@ -52,6 +56,7 @@ export const IndexProvider = ({ children }: { children: React.ReactNode }) => {
         current_note,
         set_current_note,
         update,
+        create_input_ref,
       }}
     >
       {children}

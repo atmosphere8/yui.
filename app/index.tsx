@@ -15,8 +15,15 @@ import indents from "@globals/indents";
 import { IndexProvider, useIndex } from "@contexts/index/index-context";
 
 const Index = () => {
-  const { notes, create, remove, current_note, set_current_note, update } =
-    useIndex();
+  const {
+    notes,
+    create,
+    remove,
+    current_note,
+    set_current_note,
+    update,
+    create_input_ref,
+  } = useIndex();
 
   return (
     <View style={styles.main}>
@@ -27,6 +34,7 @@ const Index = () => {
             style={styles.input}
             value={current_note}
             on_change={set_current_note}
+            ref={create_input_ref}
           />
           <Button
             action={create}

@@ -1,5 +1,6 @@
 //imports
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, RefObject, SetStateAction } from "react";
+import { TextInput } from "react-native";
 
 //types
 import { NoteType } from "@components/entities/note/note-types";
@@ -12,4 +13,5 @@ export type IndexContextType = {
   current_note: string;
   set_current_note: Dispatch<SetStateAction<string>>;
   update: (id: string, new_text: string) => void;
+  create_input_ref: RefObject<TextInput | null>;
 };
